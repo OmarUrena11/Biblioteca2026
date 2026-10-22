@@ -238,7 +238,7 @@ namespace Biblioteca.Repositories
 
                 string query = SelectLibros +
                                "WHERE l.id_categoria = @id_categoria " +
-                               "AND l.existencias > 0 " +
+                               "AND l.existencia > 0 " +
                                "ORDER BY l.titulo";
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
@@ -377,8 +377,8 @@ namespace Biblioteca.Repositories
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
 
-                comm.Parameters.AddWithValue("@isbn", libro.Titulo);
-                comm.Parameters.AddWithValue("@titulo", libro.ISBN);
+                comm.Parameters.AddWithValue("@isbn", libro.ISBN);
+                comm.Parameters.AddWithValue("@titulo", libro.Titulo);
                 comm.Parameters.AddWithValue("@id_autor", libro.IDAutor);
                 comm.Parameters.AddWithValue("@id_categoria", libro.IDCategoria);
                 comm.Parameters.AddWithValue("@existencia", libro.Existencia);

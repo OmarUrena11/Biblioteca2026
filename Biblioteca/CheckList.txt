@@ -1,13 +1,27 @@
 ************CheckList**********************
-Primero puse mi contraseña en utils de mysql 
-agregue las bibliotecas MySql.Data y MySql en LibroRepositorio
-en la linea 178 de FrmLibros no se podia convertir de string a int entonces use el Convert.ToInt32() 
-en la linea 363 de FrmLibros no se podia convertir de object a int entonces use el Convert.ToInt32() 
-en la linea 122 de FrmLibros no se podia convertir de string a int entonces use el Convert.ToInt32()
-en la linea 127 de FrmPrestamos no se podia convertir de string a Date.Time entonces use el Convert.ToDateTime()
-en la linea 141 de FrmPrestamos estaba en el metodo Registrar(prestamo) el cual solo tenia un solo parametro y agregue detalles que es el otro parametro necesario
-en la linea 20 de AlumnosRespositorio la tabla de alumnos estaba en ingles y la cambie a español
-en AlumnosRepositorio habia lineas donde apellidos no tenia la s y no encontraba la columna en la base de datos
-en la lina 295 de AlumnosRepositorio en el metodo de Modificar en la parte de ID Alumno tenia un + 1 el cual cambiaba a la siguiente id y no podias modificar la actual 
-en la lina 62  de FrmAlumnos Cuando seleccionas un alumno en lugar de mostrar su nombre muestra la matricula modifique la linea para que muestre el nombre del alumno
-en la lina 163 de FrmAlumnos estaba el metodo Agregar y lo cambie por el metodo Modificar 
+1.- Primero puse mi contraseña en utils de mysql 
+2.-agregue las bibliotecas MySql.Data y MySql en LibroRepositorio
+3.- en la linea 178 de FrmLibros no se podia convertir de string a int entonces use el Convert.ToInt32() 
+4.- en la linea 363 de FrmLibros no se podia convertir de object a int entonces use el Convert.ToInt32() 
+5.- en la linea 122 de FrmPrestamos no se podia convertir de string a int entonces use el Convert.ToInt32()
+6.- en la linea 127 de FrmPrestamos no se podia convertir de string a Date.Time entonces use el Convert.ToDateTime()
+7.- en la linea 141 de FrmPrestamos estaba en el metodo Registrar(prestamo) 
+el cual solo tenia un solo parametro y agregue detalles que es el otro parametro necesario
+8.- en la linea 20 de AlumnosRespositorio la tabla de alumnos estaba en ingles y la cambie a español
+9.- en AlumnosRepositorio habia lineas donde apellidos no tenia la s y no encontraba la columna en la base de datos
+10.- en la linea 295 de AlumnosRepositorio en el metodo de Modificar en la parte de ID Alumno tenia un + 1 
+el cual cambiaba a la siguiente id y no podias modificar la actual 
+11.- en la linea 62  de FrmAlumnos Cuando seleccionas un alumno en lugar de mostrar su nombre muestra 
+la matricula modifique la linea para que muestre el nombre del alumno
+12.- en la lina 163 de FrmAlumnos estaba el metodo Agregar y lo cambie por el metodo Modificar 
+
+....................................................................................................................
+
+13.- en la linea 272 de FrmAlumnos esta el metodo de buscar por matricula 
+en lugar de buscar por nombre solo cambie por BuscarPorNombre(nombre)
+14.- en la linea 300 de FrmLibros en el metodo de Buscar por titulo estaba repo.BuscarPorISBN(titulo)
+y lo cambie por repo.BuscarPorTitulo(titulo)
+15.- en la linea 380 y 381 de LibroRepositorio esta al reves titulo y ISBN, solo lo puse en el orden 
+correcto esto hacia que a la hora de modificar algo cambiaran de lugar el titulo y el isbn
+16.- en la linea 241 de LibroRepositorio en el WHERE existencia estaba como existencias 
+esto hacia que no se pudiera filtrar por categoria

@@ -269,7 +269,7 @@ namespace Biblioteca.Forms
             try
             {
                 AlumnoRepositorio repo = new AlumnoRepositorio();
-                List<Alumno> lista = repo.BuscarPorMatricula(nombre);
+                List<Alumno> lista = repo.BuscarPorNombre(nombre);
 
                 MostrarLista(lista);
 
